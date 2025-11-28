@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accueil - Mon Site CI/CD</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <h1 class="logo">MonSite</h1>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="active">Accueil</a></li>
+                    <li><a href="about.html">À Propos</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="hero">
+            <h2>Bienvenue sur notre site</h2>
+            <p>Ce site est déployé automatiquement via un pipeline CI/CD Jenkins</p>
+            <div class="hero-buttons">
+                <a href="about.html" class="btn btn-primary">En savoir plus</a>
+                <a href="contact.html" class="btn btn-secondary">Nous contacter</a>
+            </div>
+        </section>
+
+        <section class="features">
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <h3>🚀 CI/CD</h3>
+                    <p>Déploiement continu avec Jenkins</p>
+                </div>
+                <div class="feature-card">
+                    <h3>🔧 Automation</h3>
+                    <p>Automatisation des tests et déploiements</p>
+                </div>
+                <div class="feature-card">
+                    <h3>📦 Vagrant</h3>
+                    <p>Environnement virtualisé reproductible</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="status">
+            <h3>Statut du déploiement</h3>
+            <div class="status-badge deployed">
+                ✅ Dernier déploiement réussi
+            </div>
+            <p>Dernière mise à jour: <span id="current-date"></span></p>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+
+            <p>&copy; 2025 Mon Site CI/CD.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Afficher la date actuelle
+        document.getElementById('current-date').textContent = new Date().toLocaleDateString('fr-FR');
+    </script>
+</body>
+</html>
